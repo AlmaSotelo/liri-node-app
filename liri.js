@@ -1,8 +1,8 @@
 var Spotify = require('node-spotify-api');
  
 var spotify = new Spotify({
-  id: "700dc7351ad64643a5591df5eb526c66",
-  secret: "831c95d40b364a2aa9854d766a675adf"
+  id: 
+  secret: 
 });
 
 
