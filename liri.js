@@ -10,7 +10,6 @@ var fs = require('fs');
 var keys = require('./keys');
 // to access keys information
 var spotify = new Spotify(keys.spotify); 
-console.log(spotify);
 
 // Get element in process.argv for index 2 and assign it to var "command"
 var command = process.argv[2];
@@ -20,9 +19,14 @@ if( command == "spotify-this-song") {
   // Get element in process.argv, starting from index 3 to the end, 
   // joint them into a string to get the title of the song, and
   // store it in variable "song".
-   var song = process.argv.slice(3, process.argv.length).join(' ');
-   spotify.search({ type: 'track', query: song }, function(err, data) {
-      if (err) {
+  var song = process.argv.slice(3, process.argv.length).join(' ');
+  if (song==="") {
+    console.log ("Please enter a song name, while you think, here is my option: ");
+    song = "Let it go";
+    console.log(song);
+  };
+  spotify.search({ type: 'track', query: song }, function(err, data) {
+    if (err) {
       return console.log('Error occurred: ' + err);
       }
    //console.log(data.tracks.items[0]); 
@@ -38,6 +42,11 @@ if( command == "spotify-this-song") {
 else if (command == "concert-this"){ 
   // to store artist inquire argument in an array
   var artist = process.argv.slice(3, process.argv.length).join(' ');
+    if (artist==="") {
+      console.log ("Please enter a concert/artist name, while you think, here is my option: ");
+      artist = "Los tigres del norte";
+      console.log(artist);
+    };
   // Run the request function...
   // The request function takes in a URL then returns three arguments:
   // 1. It provides an error if one exists.
@@ -45,7 +54,6 @@ else if (command == "concert-this"){
   // 3. It provides the actual body text from the website <---- what actually matters.
   queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
   request(queryUrl, function(error, response, body) {
-    console.log(queryUrl);
     // If the request was successful...
     if (!error && response.statusCode === 200) {
       // Parse the body of the site and recover just what is needed
@@ -66,12 +74,12 @@ else if (command == "concert-this"){
 
         // to look for movies
 
-else if (command == "movie-this"){ 
+else if (command === "movie-this"){ 
   // to store movie inquire argument in an array
   var movie = process.argv.slice(3, process.argv.length).join(' ');
-  if (movie="undefine") {
+  if (movie==="") {
     console.log ("Please enter a movie name, while you think, here is my option: ");
-    movie = "Mr. nobody";
+    movie = "Frozen";
   }
   queryUrl = "http://www.omdbapi.com/?apikey=trilogy&t=" + movie;   
   request(queryUrl, function(error, response, body) {
@@ -88,7 +96,7 @@ else if (command == "movie-this"){
     }
   }); 
 }
-else if (command == "do-what-it-says"){       //  to look for "do-what-it-says"
+else if (command === "do-what-it-says"){       //  to look for "do-what-it-says"
   console.log(fs.readFileSync("random.txt").toString());
 };
 
