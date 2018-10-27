@@ -24,12 +24,20 @@
 ####             Actors in the movie
 ##    4. do-what-it says
 ###        Output:
-####             A random song. Also the code for a random concert and a random movie is included as a commented code.
+###A random song. Also the code for a random concert and a random movie is included as a commented code.
 ![spotify-this-song](/images/spotify-this-song.png)
-   
+![concert-this](/images/concert-this.png)
+![movie-this](/images/movie-this.png)
 
-# Spotify-this-song is coded using npm Node-Spotify-API, and keys used are hided.
-# concert-this and movie-this uses 'require'.
+
+## Spotify-this-song is coded using npm Node-Spotify-API, and keys used are hided.
+## concert-this and movie-this uses 'require'.
+
+<video width="320" height="240" controls>
+  <source src="/images/runnig-the-code.mp4" type="video/mp4">
+  <source src="/images/spotify-this-song.mp4" type="video/mp4">
+</video>
+
 
  
 
