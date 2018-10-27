@@ -30,13 +30,11 @@
 ![movie-this](/images/movie-this.png)
 
 
-## Spotify-this-song is coded using npm Node-Spotify-API, and keys used are hided.
-## concert-this and movie-this uses 'require'.
+### Spotify-this-song is coded using npm Node-Spotify-API, and keys used are hided.
+### concert-this and movie-this uses 'require'.
 
-<video width="320" height="240" controls>
-  <source src="/images/runnig-the-code.mp4" type="video/mp4">
-  <source src="/images/spotify-this-song.mp4" type="video/mp4">
-</video>
+[running the code](https://youtu.be/xE3Z-nq79Ks)
+[spotify-this-song-video](https://youtu.be/r5SdldqQnZI)
 
 
  
