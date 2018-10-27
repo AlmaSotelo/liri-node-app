@@ -25,7 +25,7 @@
     4. do-what-it says
         Output:
              A random song. Also the code for a random concert and a random movie is included as a commented code.
-             ![image1](/images/spotify-this-song)
+             ![spotify-this-song](/images/spotify-this-song.png)
    
 
  Spotify-this-song is coded using npm Node-Spotify-API, and keys used are hided.
