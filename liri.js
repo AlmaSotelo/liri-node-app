@@ -35,6 +35,7 @@ if( command == "spotify-this-song") {
    console.log("Preview URL : " + (data.tracks.items[0].preview_url ? data.tracks.items[0].preview_url : "Not Available") );
    console.log("Album Name: " + data.tracks.items[0].album.name);
    console.log("Artist Name: " + data.tracks.items[0].album.artists[0].name );
+   
    });
 } 
 
@@ -119,6 +120,7 @@ else if (command === "do-what-it-says"){       //  to look for "do-what-it-says"
       console.log("Preview URL : " + (data.tracks.items[0].preview_url ? data.tracks.items[0].preview_url : "Not Available") );
       console.log("Album Name: " + data.tracks.items[0].album.name);
       console.log("Artist Name: " + data.tracks.items[0].album.artists[0].name );
+      
       });
     
                  //  movie
@@ -160,8 +162,9 @@ else if (command === "do-what-it-says"){       //  to look for "do-what-it-says"
     // }); 
   
   });
-
 };
+             // For the log.text
+fs.writeFileSync("log.txt", 'here goes the text to log', "UTF-8",{'flags': 'a+'});          
 
 
 
